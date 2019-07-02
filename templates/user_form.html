@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+        .error {
+            color: red;
+            padding: 0px;
+        }
+        body {
+            padding-top: 180px;
+            padding-left: 550px;
+            padding-right: 540px;
+            background-image: url('static/images/two_tone.jpg');
+            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        }
+        .form {
+            background: #FFFFFF;
+            padding:50px;
+            border: 1px;
+        }
+        .title {
+            color: #000000;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="image"><img src="static/images/logo.png" alt="logo"/><div>
+
+<div class="form">
+
+    <div class="title"> <h1>Signup Now</h1> </div>
+
+<p>Please use the signup form below to register!</p>
+
+<form action = "/validate" method='POST'>
+    <table cellspacing = "20"><tobdy>
+        <tr>
+            <td><label>Username</label></td>
+                <td><input name= "username" type="text" value='{{username}}' /></td>
+                <td><span class="error">{{username_error}}</span></td>
+        </tr><tr>
+            <td><label>Password</label></td>
+                <td><input name="password" type="password" value='{{password}}' /></td>
+                <td><span class="error">{{password_error}}</span></td>
+        </tr><tr>
+            <td><label>Verify Password</label></td>
+                <td><input name="verify_password" type="password" value='{{verify_password}}' /></td>
+                <td><span class="error">{{verify_password_error}}</span></td>
+        </tr><tr>
+            <td><label>Email (optional)</label></td>
+                <td><input name="email" type="text" value='{{email}}' /></td>
+                <td><span class="error">{{email_error}}</span></td>
+        </tr><tr>
+            <td><input type="Submit" value="Submit" /><td>
+        </tr>
+            </form> 
+
+        </tr>
+    </tbody></table>
+
+</div>
+</body>
+<footer>
+    <div class="footer">
+
+    </div>
+</footer>
+</html>
